@@ -75,11 +75,27 @@ public class RequestBodyJsonServlet extends HttpServlet {
 - 응답 메시지 생성
 
   - 응답코드 지정
-
   - 헤더 생성
-
   - 바디 생성
-
   - 쿠키 생성 등등등
+
+  ### ResponseJsonServlet
+
+  ```java
+      @Override
+      protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+          resp.setHeader("content-type", "application/json");
+          resp.setCharacterEncoding("utf-8");
+  
+          HelloData data = new HelloData();
+          data.setUsername("sang");
+          data.setAge(27);
+  
+          String result = objectMapper.writeValueAsString(data);
+          resp.getWriter().write(result);
+      }
+  ```
+
+  - `objectMapper.writeValueAsString()` 을 사용하면 객체를 JSON문자로 변경할 수 있다 
 
     
