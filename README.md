@@ -102,3 +102,10 @@ public class RequestBodyJsonServlet extends HttpServlet {
 
 # 회원 관리 웹 애플리케이션
 
+### 템플릿 엔진이 나온 이유
+
+- HTML 문서에 동적으로 변경해야 하는 부분만 자바 코드를 넣을 수 있게 한다 
+
+- 필요한 곳만 코드를 적용해 동적으로 변경한다 
+
+  
