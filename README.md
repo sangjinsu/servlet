@@ -1,4 +1,4 @@
-# Hello 서블릿
+# 서블릿, JSP, MVC 패턴
 
 ## HttpServletRequest 역할
 
@@ -109,3 +109,42 @@ public class RequestBodyJsonServlet extends HttpServlet {
 - 필요한 곳만 코드를 적용해 동적으로 변경한다 
 
   
+
+## JSP
+
+- import
+
+```jsp
+<%@ page import="hello.servlet.domain.Member" %>
+```
+
+- java 입력
+
+```jsp
+<ul>
+    <li>id=<%=member.getId()%>
+    </li>
+    <li>username=<%=member.getUsername()%>
+    </li>
+    <li>age=<%=member.getAge()%>
+    </li>
+</ul>
+```
+
+- java 출력
+
+```jsp
+    <%
+        for (Member member : members) {
+            out.write("    <tr>");
+            out.write("        <td>" + member.getId() + "</td>");
+            out.write("        <td>" + member.getUsername() + "</td>");
+            out.write("        <td>" + member.getAge() + "</td>");
+            out.write("    </tr>");
+        }
+    %>
+```
+
+
+
+# 
