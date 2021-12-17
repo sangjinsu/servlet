@@ -12,3 +12,18 @@
 - 스프링 웹 MVC DispatcherServlet이 FrontController 패턴으로 구현되어 있음
 
   
+
+### 서블릿 종속성 제거
+
+- 컨트롤러가 Http ServletRequest, HttpServletResponse 가 필요하지 않은 경우가 있다 
+- request 객체를 Model로 사용하는 대신에 별도의 Model 객체를 만들어서 반환하면 된다
+
+
+
+#### 뷰 이름 중복 제거 
+
+- 컨트롤러에서 지정하는 뷰 이름에 중복이 있음
+
+- 컨트롤러가 뷰의 논리 이름을 반환하고 실제 물리 위치 이름은 프론트 컨트롤러에서 처리하도록 단순화 한다 
+
+   
